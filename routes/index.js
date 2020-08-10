@@ -8,7 +8,7 @@ router.get('/sendPage', function(req, res, next) {
 });
 
 router.get('/firstPage', function(req, res, next) {
-  console.log('first_paget render : ')
+  
   res.render('firstPage.html');
 });
 
