@@ -7,6 +7,15 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 
+require('dotenv').config();
+const mongoose = require('mongoose')
+const mongo_port = process.env.MONGO_PORT
+
+mongoose.connect(process.env.MONGO_URL+mongo_port ,{useNewUrlParse:true})
+.then(()=> console.log('succefully connected to mongod'))
+.catch(e=> console.error(e));
+
+
 
 
 var app = express();
