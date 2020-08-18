@@ -13,4 +13,8 @@ const todoSchema = new mongoose.Schema({
 timestamps:true
 })
 
+const productSchema = mongoose.Schema({
+    _id:mongoose.Types.ObjectId
+})
+
 module.exports = mongoose.model('ToDo',todoSchema)
