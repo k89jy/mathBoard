@@ -6,14 +6,20 @@ var logger = require('morgan');
 
 
 var indexRouter = require('./routes/index');
+const { db } = require('./models/todo');
 
 require('dotenv').config();
-const mongoose = require('mongoose')
-const mongo_port = process.env.MONGO_PORT
+// const mongoose = require('mongoose')
+// const mongo_port = process.env.MONGO_PORT
 
-mongoose.connect(process.env.MONGO_URL+mongo_port ,{useNewUrlParse:true})
-.then(()=> console.log('succefully connected to mongod'))
-.catch(e=> console.error(e));
+// mongoose.connect(process.env.MONGO_URL+mongo_port ,{useNewUrlParse:true})
+// .then(()=> console.log('succefully connected to mongod'))
+// .catch(e=> console.error(e));
+
+
+//mongodb url
+const mongo_url = process.env.MONGO_URL+process.env.MONGO_PORT
+
 
 
 

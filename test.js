@@ -1,7 +1,19 @@
-function E(variable)
-{
+const mongoose = require('mongoose');
+const { schema } = require('./models/todo');
+// test moongose CRUD
 
-console.log(`E1: ${variable.element1}\nE2: ${variable.element2}\nE3: ${variable.element3}`)
-}
 
-E(  {"element1" : "no","element2":"yes", "element3" : "no"})
+var Schema = mongoose.Schema;
+
+var person = new Schema({
+    name:"me",
+    height:180
+})
+
+const Model = mongoose.model('person',schema)
+
+await Model.save()
+
+
+
+//
