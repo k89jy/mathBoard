@@ -1,19 +1,10 @@
-const mongoose = require('mongoose');
-const { schema } = require('./models/todo');
-// test moongose CRUD
+const mongodb = require('mongodb')
 
 
-var Schema = mongoose.Schema;
+const mongodbClient = mongodb.MongoClient;
 
-var person = new Schema({
-    name:"me",
-    height:180
+mongodbClient.connect(url, function(db, err){
+
+    
+
 })
-
-const Model = mongoose.model('person',schema)
-
-await Model.save()
-
-
-
-//
