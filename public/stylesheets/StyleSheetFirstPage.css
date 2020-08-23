@@ -41,7 +41,9 @@ footer {
 
 #heading {
     color:black;
-    font-size: x-large;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
     
 }
 

@@ -19,7 +19,7 @@ router.get('/sendPage', function(req, res, next) {
   //     date:{type:Date, default:DataCue.now}
   //   })
 
-  //   const Model = moongse.model('Person',schema)
+  //   const Model = moongse.model()
 
   //   const person = new Model()
 
@@ -31,15 +31,10 @@ router.get('/sendPage', function(req, res, next) {
 router.get('/firstPage', function(req, res, next) {
   
 
-  MongoClinet.connect(url, function(db, err){
-    if(err){
-      console.log(err)
-    }else{
-      console.log('db connect success')
-    
-    }
-  })
+  
   res.render('firstPage.html');
+
+
 });
 
 router.post('/postPerson',function(req ,res,next){
