@@ -1,3 +1,7 @@
+body{
+background-image: url("../images/firstPageBackGround.jfif");
+  background-color: #cccccc;
+}
 header {
     border-radius: 25px;
     background-color: rgb(145, 66, 66);
