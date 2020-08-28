@@ -37,10 +37,11 @@ router.get('/firstPage', function(req, res, next) {
 
 });
 
-router.post('/postPerson',function(req ,res,next){
+router.get('/landingPage',function(req ,res,next){
 
 
   
+  res.render('landingpage.html');
 
 
 
